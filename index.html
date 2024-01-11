@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+  <script type="text/javascript" src="sample.js">
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?language=ja&key=AIzaSyAtP4KJXm0-sVqOPScfqqG2EwHZrWvbSnY&callback=initialize">
+  </script>
+</head>
+<body onload="initialize()" class="h-screen m-0 p-0 bg-hero-image" style="background: url('img/sweets-bg.png') repeat-y">
+  <section class="w-3/5 pt-32 m-auto text-center">
+    <h1 class="text-xl">代々木八幡の美味しいスイーツ巡り</h1>
+    
+    <div id="map_canvas" class="h-96 w-full mt-4"></div>
+  
+    <form class="mt-4">
+      <p class="w-full flex flex-col gap-1 md:flex-row">
+        <input type="button" value="ナタデクリスティアーノ" onclick="toNataDeCristiano()" class="btn btn-primary bg-indigo-700 hover:opacity-75 md:w-[calc((100%-8px)/3)]"/>
+        <input type="button" value="イルキャンティ" onclick="toIlChianti()" class="btn btn-primary bg-indigo-700 hover:opacity-75 md:w-[calc((100%-8px)/3)]"/>
+        <input type="button" value="豆虎富ヶ谷焙煎所" onclick="toMameTora()" class="btn btn-primary bg-indigo-700 hover:opacity-75 md:w-[calc((100%-8px)/3)]"/>
+      </p>
+    </form>
+  </section>
+</body>
+</html>
